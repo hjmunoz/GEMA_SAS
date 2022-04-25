@@ -58,9 +58,10 @@ class VehiculoController extends Controller
      * @param  \App\Models\Vehiculo  $vehiculo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vehiculo $vehiculo)
+    public function edit($id)
     {
-        return view('vehiculo.edit');
+        $vehiculo = Vehiculo::findOrFail($id);
+        return view('vehiculo.edit', compact('vehiculo'));
     }
 
     /**
@@ -70,9 +71,12 @@ class VehiculoController extends Controller
      * @param  \App\Models\Vehiculo  $vehiculo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vehiculo $vehiculo)
+    public function update(Request $request, $id)
     {
-        //
+        $datosVehiculo = request()->except(['_token', '_method']); 
+        Vehiculo::where('id', '=', $id)->update($datosVehiculo);
+        $vehiculo = Vehiculo::findOrFail($id);
+        return redirect('vehiculo');
     }
 
     /**
