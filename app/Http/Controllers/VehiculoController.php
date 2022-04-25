@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehiculo;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facade\Excel;
 
 class VehiculoController extends Controller
 {
@@ -91,8 +92,8 @@ class VehiculoController extends Controller
         return redirect('vehiculo');
     }
 
-    public function export()
+    public function exportar()
     {
-        
+        return view('vehiculo.excel');
     }
 }

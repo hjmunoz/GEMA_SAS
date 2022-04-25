@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/vehiculo/excel', function () {
+    return view('vehiculo.excel');
+});
+
+
+
 Route::resource('vehiculo', VehiculoController::class);
 
-Route::get('/vehiculo/export', [VehiculoController::class, 'export']);
+Route::get('/vehiculo/excel', [VehiculoController::class, 'exportar']);

@@ -1,3 +1,8 @@
+<?php
+header('Content-type:application/xls');
+header('Content-Disposition: attachment; filename=vehiculos.xls');
+?>
+
 @include('vehiculo.nav')
 
 <div class="container">
@@ -46,9 +51,6 @@
                         {{method_field('DELETE')}}
                         <input type="submit" class="btn btn-danger " onclick="return confirm('¿Quieres Borrar?')" value="Borrar">
                     </form>
-
-
-
                 </td>
             </tr>
             @endforeach

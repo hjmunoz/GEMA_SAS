@@ -14,9 +14,7 @@
                         <a class="nav-link" href="{{url('vehiculo/create')}}">Registrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('vehiculo')}}">Lista</a>
-                    </li>
-
+                        <a class="nav-link" href="{{url('vehiculo')}}">Lista</a>                                
                 </ul>
             </div>
         </div>
