@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->id();
+            $table->string("Placa");
+            $table->string("Telefono");
+            $table->string("Color");
+            $table->string("Estado");
+            $table->date("Fecha");
             $table->timestamps();
         });
     }
