@@ -1,1 +1,4 @@
-<h1>create</h1>
+<form action="{{url('/vehiculo')}}" method="POST">
+    @csrf
+    @include('vehiculo.form');
+</form>

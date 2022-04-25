@@ -14,7 +14,8 @@ class VehiculoController extends Controller
      */
     public function index()
     {
-        //
+        $datos['vehiculos']  = Vehiculo::paginate();
+        return view('vehiculo.index', $datos);
     }
 
     /**
@@ -24,7 +25,7 @@ class VehiculoController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehiculo.create');
     }
 
     /**
@@ -35,7 +36,9 @@ class VehiculoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosVehiculo = request()->except('_token');
+        Vehiculo::insert($datosVehiculo);
+        return redirect('vehiculo');
     }
 
     /**
@@ -57,7 +60,7 @@ class VehiculoController extends Controller
      */
     public function edit(Vehiculo $vehiculo)
     {
-        //
+        return view('vehiculo.edit');
     }
 
     /**
@@ -78,8 +81,9 @@ class VehiculoController extends Controller
      * @param  \App\Models\Vehiculo  $vehiculo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vehiculo $vehiculo)
+    public function destroy($id)
     {
-        //
+        Vehiculo::destroy($id);
+        return redirect('vehiculo');
     }
 }
