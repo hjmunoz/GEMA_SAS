@@ -94,6 +94,8 @@ class VehiculoController extends Controller
 
     public function exportar()
     {
-        return view('vehiculo.excel');
+        $datos['vehiculos']  = Vehiculo::paginate();
+        return view('vehiculo.excel', $datos);
+        
     }
 }
