@@ -90,4 +90,9 @@ class VehiculoController extends Controller
         Vehiculo::destroy($id);
         return redirect('vehiculo');
     }
+
+    public function export()
+    {
+        
+    }
 }

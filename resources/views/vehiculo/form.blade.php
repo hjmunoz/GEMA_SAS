@@ -15,19 +15,19 @@
         <div class="row">
             <div class="col-lg-4">
                 <label for="Placa" class="form-label">Placa:</label>
-                <input type="text" class="form-control" name="placa" value="{{$vehiculo->Placa}}" id="Placa"><br>
+                <input type="text" class="form-control" name="placa" value="{{isset($vehiculo->Placa)?$vehiculo->Placa:''}}" id="Placa"><br>
 
                 <label for="Telefono" class="form-label">Teléfono:</label>
-                <input type="text" class="form-control" name="telefono" value="{{$vehiculo->Telefono}}" id="Telefono"><br>
+                <input type="text" class="form-control" name="telefono" value="{{isset($vehiculo->Telefono)?$vehiculo->Telefono:''}}" id="Telefono"><br>
 
                 <label for="Color" class="form-label">Color:</label>
-                <input type="text" class="form-control" name="color" value="{{$vehiculo->Color}}" id="Color"><br>
+                <input type="text" class="form-control" name="color" value="{{isset($vehiculo->Color)?$vehiculo->Color:''}}" id="Color"><br>
 
                 <label for="Estado" class="form-label">Estado:</label>
-                <input type="text" class="form-control" name="estado" value="{{$vehiculo->Estado}}" id="Estado"><br>
+                <input type="text" class="form-control" name="estado" value="{{isset($vehiculo->Estado)?$vehiculo->Estado:''}}" id="Estado"><br>
 
                 <label for="ApellidoMaterno" class="form-label">Fecha:</label>
-                <input type="date" class="form-control" name="fecha" value="{{$vehiculo->Fecha}}" id="Fecha"><br>
+                <input type="date" class="form-control" name="fecha" value="{{isset($vehiculo->Fecha)?$vehiculo->Fecha:''}}" id="Fecha"><br>
 
                 <input type="submit" class="btn btn-dark" value="Guardar datos"><br><br>
             </div>

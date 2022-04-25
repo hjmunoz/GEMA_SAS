@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('vehiculo', VehiculoController::class);
+
+Route::get('/vehiculo/export', [VehiculoController::class, 'export']);
